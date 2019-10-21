@@ -7,7 +7,8 @@ Wrote on 21/10/19
 #include <stdio.h>
 int main()
 {
-	int choice, entry, i, a, sum, count;
+	int choice, entry, count;
+	unsigned long i, a, sum;
 	i = 0;
 	a = 1;
 	count = 2;
