@@ -6,6 +6,7 @@ Author: Saul Burgess
 */
 
 #include <stdio.h>
+#include <conio.h>
 int main(){
 
 
@@ -40,7 +41,8 @@ int main(){
 
       }//End Calc.
 
-      printf("\n\n\n");
+      calcB = 1, calcA = 0, i=1, ans=0;
+      printf("\n\n\n\n\n");
     }//End fibanachi
 
   }//End PROGRAM if.
