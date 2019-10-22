@@ -35,7 +35,7 @@ int main(){
       for (i=1; i<=fibanachi; ++i){
 
         //Calculation
-        printf("%d  ", calcA);
+        printf("%ld  ", calcA);
         ans = calcA + calcB;
         calcA = calcB;
         calcB = ans;
