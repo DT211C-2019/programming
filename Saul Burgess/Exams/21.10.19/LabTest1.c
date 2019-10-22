@@ -6,6 +6,8 @@ Author: Saul Burgess
 */
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <unistd.h>
 int main(){
 
 
@@ -41,7 +43,8 @@ int main(){
       }//End Calc.
 
       calcB = 1, calcA = 0, i=1, ans=0;
-      printf("\n\n\n\n\n");
+      sleep(2.5);
+      system("cls");
     }//End fibanachi
 
   }//End PROGRAM if.
