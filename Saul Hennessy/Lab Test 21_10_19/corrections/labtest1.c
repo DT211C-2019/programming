@@ -8,7 +8,7 @@ Wrote on 21/10/19
 int main()
 {
 	int choice, entry, count;
-	unsigned long i, a, sum;
+	long unsigned i, a, sum;
 	i = 0;
 	a = 1;
 	count = 2;
@@ -25,7 +25,7 @@ int main()
 		if(choice==1) //check to see if user selected to proceed or to exit
 		{
 			printf("Enter how many terms you would like displayed.\n");
-			scanf("%d", &entry);
+			scanf("%lu", &entry);
 			printf("0\n1\n");
 
 			while (count < entry) //The actual algorithm for the Fibonacci series. Funnily enough the shortest part.
