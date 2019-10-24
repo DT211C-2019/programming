@@ -3,7 +3,6 @@ Summary: To create a program that simulates a maths quiz.
 Date of Last Edit: 23.10.19
 Compiler: GCC (mingw)
 OS: Windows 10
-DEMONSTRATION
 */
 
 #include <stdio.h>
