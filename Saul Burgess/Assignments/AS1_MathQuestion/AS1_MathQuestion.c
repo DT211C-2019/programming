@@ -16,28 +16,35 @@ int main(){
 
 
   while (program_main == 1){
-    printf("Welcome to the MathQuiz program!\nPlease select one of the options:\n1. TEMP\n2. TEMP\n3. End Program\n");
-    scanf("%d", &function_select);
+    printf("Welcome to the MathQuiz program!\nPlease select one of the options:\n1. TEMP\n2. TEMP\n3. TEMP\n4. Terminate the program.");
+    scanf("%1s", &function_select);
 
 
     switch (function_select){
 
-      case 1 : {
+      case '1' : {
         printf("You entered 1.");
         break;
       }//End Case 1.
 
-      case 2 : {
+      case '2' : {
         printf("You entered 2.");
         break;
       }//End Case 2.
 
-      case 3 : {
-        printf("You have now terminated the program. Goodbye.");
-        sleep(0.5);
-        program_main = 0;
+      case '3' : {
+        printf("You entered 3.");
         break;
       }//End Case 3.
+
+      case '4' : {
+        printf("You have now terminated the program. Goodbye.");
+        sleep(1);
+        program_main = 0;
+        break;
+      }//End Case 4.
+
+
 
 
     }//End Switch.
