@@ -18,6 +18,7 @@ OS: Windows 10
 int main(){
   int program_main = 1;
   int q3lock = 1;
+  int q2lock = 1;
   int i;
   int j;
   int function_select;
@@ -46,13 +47,17 @@ int main(){
       }//End Case 2.
 
       case '3' : {
-        printf("You entered 3.");
-        
+        if(q3lock == 0){
+
+        }//End If.
+        else{
+          printf("Invalid Input. Quiz must be played to display results.\n");
+        }//End Else.
         break;
       }//End Case 3.
 
       case '4' : {
-        printf("\n\n=============================================\nYou have now terminated the program. Goodbye\n=============================================");
+        printf("You have now terminated the program. Goodbye\n");
         sleep(2.5);
         program_main = 0;
         break;
@@ -60,7 +65,7 @@ int main(){
 
 
       default :{
-        printf("\n\n=============================================================================================\nInvalid Operator Entered. Please select a valid operator from the screen above when prompted.\n=============================================================================================");
+        printf("Invalid Operator Entered. Please select a valid operator from the screen above when prompted.\n");
         sleep(3.5);
       }//End Default.
 
