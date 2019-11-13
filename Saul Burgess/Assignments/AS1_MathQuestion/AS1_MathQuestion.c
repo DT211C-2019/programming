@@ -12,7 +12,7 @@ OS: Windows 10
 #include <time.h>
 
 //Definitions.
-#define maxquestions 5
+#define maxquestions 100
 
 
 int main(){
