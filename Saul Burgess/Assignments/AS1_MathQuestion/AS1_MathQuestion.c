@@ -126,7 +126,7 @@ int main(){
 
             if (ans != Usrans){
               incorrect++;
-              printf("You are incorrect");
+              printf("You are incorrect, the correct answer is %.2f", ans);
               sleep(1);
             }//End INCORRECT if.
             printf("\n\n");
