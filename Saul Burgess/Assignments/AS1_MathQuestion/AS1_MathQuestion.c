@@ -38,7 +38,7 @@ int main(){
   while (program_main == 'Y'){
     printf("Welcome to the MathQuiz program!\nPlease select one of the options:\n\n1. Edit Quiz Length\n2. Begin Quiz\n3. Display Results\n4. Terminate the program.\n");
     scanf("%d", &function_select);
-    getchar();
+    while (getchar() !='\n');
 
     //Defaults rand() limits.
     former = latter = 0;
@@ -55,7 +55,7 @@ int main(){
         printf("Warning: If you select a character or a number greater then %d, the program will default to %d.\n", maxquestions, maxquestions);
         printf("===============================================================================================\n");
         scanf(" %d", &questionsnormal);
-        getchar();
+        while (getchar() !='\n');
 
         if(questionsnormal>maxquestions){
           questionsnormal = maxquestions;
@@ -116,7 +116,7 @@ int main(){
             //prints the question, then requests an answer from user.
             printf("\n%d: %.2f %c %.2f\n", i, former, operator, latter);
             scanf(" %f", &Usrans);
-            getchar();
+            while (getchar() !='\n');
 
             if (ans == Usrans){
               correct++;
