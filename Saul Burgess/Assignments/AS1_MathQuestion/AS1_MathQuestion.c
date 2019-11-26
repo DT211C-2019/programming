@@ -29,7 +29,7 @@ int main(){
   int max_char=4;
 
   int i = 0;
-  int function_select, char_select, operator, qcounter, correct, incorrect;
+  int function_select, char_select, operator, correct, incorrect;
   int questionsnormal = maxquestions;
   float latter, former, ans, Usrans;
 
@@ -70,7 +70,6 @@ int main(){
       case 2 : {
 
         //Defaults counters required for for loop.
-        qcounter = 1;
         correct = incorrect = 0;
 
         //Prevents activation if case 1 is not triggered.
