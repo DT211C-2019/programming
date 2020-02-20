@@ -1,7 +1,7 @@
 /*
 Summary: To create a program that converts Euro to Dollar and the reverse.
 Author: Saul Burgess
-Date of Last Edit: 2019-12-02
+Date of Last Edit: 2020-02-20
 Compiler: mingw (gcc)
 */
 
