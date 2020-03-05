@@ -1,0 +1,17 @@
+/*
+	Description
+Testing pointers
+	Author
+Paul Geoghegan
+	Date
+18/11/19
+*/
+
+#include <stdio.h>
+
+int main()
+{
+
+
+
+} //end main
