@@ -7,12 +7,12 @@ Date of Last Edit: 10/11/19
 Compiler: GCC (mingw)
 OS: Windows 10
 */
+//TODO: Add /a to all errors
 
 //Headers
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
-#include <time.h>
 #include <string.h>
 
 //Definitions
@@ -32,9 +32,9 @@ void frequency();
 void terminateProgram();
 
 //Utility Prototypes
-int intiger_Error_Checking_Within_Range_No_Char(int rangelow, int rangehigh, int input);
+int integer_Error_Checking_Within_Range_No_Char(int rangelow, int rangehigh, int input);
 int is_element_in_array_same(int array[], int check_element, int arraysize);
-int partiton (int array[], int lowindex, int highindex);
+int partition (int array[], int lowindex, int highindex);
 void lockout_if_Condition_Not_Met(int trigger);
 void quickSort(int array[], int lowindex, int highindex);
 void headerdisplay(int stringsize, char message[stringsize+1]);
@@ -66,8 +66,11 @@ int main(){
 
     //Input
     scanf("%d", &function_select);
+
+    //Clears whitespace characters
     while (getchar() !='\n');
-    function_select = intiger_Error_Checking_Within_Range_No_Char(1, 6, function_select);
+
+    function_select = integer_Error_Checking_Within_Range_No_Char(1, 6, function_select);
 
     //Function Select
     switch (function_select){
@@ -118,7 +121,7 @@ void input(){
 
   //Checks if the input array is greater then 0, then askes if the user wishes to reset
   while (*(input_Num + 0) > 0){
-    printf("Warning: This action will void the current input dataset, do you still wish to continue? y/n\n");
+    printf("Warning: This action will void the current input dataset, do you still wish to continue? y/n\n\a");
     scanf("%c", &response);
     while (getchar() !='\n');
 
@@ -150,16 +153,16 @@ printf("Please enter %d numbers between %d and %d\n",NO_OF_INPUTS, MIN_PREDEFINE
     while (getchar() !='\n');
     printf("\n");
 
-    //Sanatizes the inputted number to make sure it is a intiger and within the given range
-    input = intiger_Error_Checking_Within_Range_No_Char(MIN_PREDEFINED_RANGE, MAX_PREDEFINED_RANGE, input);
+    //Sanatizes the inputted number to make sure it is a integer and within the given range
+    input = integer_Error_Checking_Within_Range_No_Char(MIN_PREDEFINED_RANGE, MAX_PREDEFINED_RANGE, input);
 
     //Checks to see if the inputted number is the same as any of the numbers in the array, prevents this
     while (is_element_in_array_same(input_Num, input, arraysize) == 1){
-      input = intiger_Error_Checking_Within_Range_No_Char(MIN_PREDEFINED_RANGE, MAX_PREDEFINED_RANGE, input);
-      printf("Error: You have entered the same number twice, please enter a different number\n");
+      input = integer_Error_Checking_Within_Range_No_Char(MIN_PREDEFINED_RANGE, MAX_PREDEFINED_RANGE, input);
+      printf("Error: You have entered the same number twice, please enter a different number\n\a");
       scanf("%d", &input);
       while (getchar() !='\n');
-      input = intiger_Error_Checking_Within_Range_No_Char(MIN_PREDEFINED_RANGE, MAX_PREDEFINED_RANGE, input);
+      input = integer_Error_Checking_Within_Range_No_Char(MIN_PREDEFINED_RANGE, MAX_PREDEFINED_RANGE, input);
     }//End check if the element is the same as any others check
 
     //Enters chosen number into array
@@ -189,6 +192,7 @@ void display(){
 //Sorts array
 void sort(){
   int arraysize = sizeof(input_Num) / sizeof(*(input_Num+ 0));
+  char response;
 
   //Clears screen and displays header
   headerdisplay(20, "Lotto Game V3.1");
@@ -198,8 +202,20 @@ void sort(){
 
   //Runs the quicksort algorithim, then returns the user back to the screen after two seconds
   quickSort(input_Num, 0, arraysize-1);
-  printf("Array Sorted, select option two in the menu to view the sorted array.");
-  sleep(2);
+
+  //Asks user for response
+  printf("Array Sorted, do you want to display the array? y/n\n");
+  scanf("%c",&response);
+  while (getchar() !='\n');
+
+  //Checks the user input, I.E if they want to close the program
+  if(response == 'y'){
+    display();
+  }//End
+
+  else{
+    main();
+  }//End Else
 
 }//End Sort
 
@@ -208,7 +224,7 @@ void sort(){
 void compare(){
   int arraysize = sizeof(input_Num) / sizeof(*(input_Num+ 0));
   int score = 0;
-  int i;
+  register int i;
 
   //Clears screen and displays header
   headerdisplay(20, "Lotto Game V3.1");
@@ -256,8 +272,8 @@ void compare(){
 
 //Displays the frequency of entered numbers
 void frequency(){
-  int arraysize = sizeof(input_Num) / sizeof(*(input_Num+ 0));
-  int i;
+  int arraysize = sizeof(frequency_of_Num) / sizeof(*(frequency_of_Num+ 0));
+  register int i;
 
   //Clears screen and displays header
   headerdisplay(20, "Lotto Game V3.1");
@@ -265,25 +281,42 @@ void frequency(){
   //Checks if option one has been completed, otherwise returns the user to the menu
   lockout_if_Condition_Not_Met(*(input_Num + 0));
 
+  //Displays frequency of entered numbers
   for (i=0;i<arraysize;i++){
     if (*(frequency_of_Num + i) > 0){
-      printf("%d has been used %d times\n",i,*(frequency_of_Num + i));
+      printf("%d has been used %d times\n\n",i,*(frequency_of_Num + i));
     }//End check if above zero
   }//End display frequency for
 
   printf("\n\nPress enter to continue");
   getchar();
+
 }//End Frequency
 
 
 //Terminates the program
 void terminateProgram(){
+  char response;
 
   //Clears screen and displays header
   headerdisplay(20, "Lotto Game V3.1");
 
-  printf("The program will now shut down, goodbye!");
-  exit(EXIT_SUCCESS);
+  printf("Warning: This will end the program, voiding all stored data. Are you sure you want to continue? y/n\n\a");
+  scanf("%c", &response);
+  while (getchar() !='\n');
+
+  //Checks the user input, I.E if they want to close the program
+  if(response == 'y'){
+    headerdisplay(20, "Lotto Game V3.1");
+    printf("The program will now shut down, goodbye!");
+    sleep(1);
+    exit(EXIT_SUCCESS);
+  }//Exit program
+
+  else{
+    main();
+
+  }//End return to main
 }//End terminate program
 
 
@@ -302,10 +335,11 @@ Description: When provided an accurate trigger, this will prevent the user from 
 */
 void lockout_if_Condition_Not_Met(int trigger){
   while(trigger < 1){
-    printf("Error: You have not inputted any data, please select option one\n\n");
+    printf("Error: You have not inputted any data, please select option one\n\n\a");
     printf("Press enter to continue");
     getchar();
     main();
+
   }//End check if option one is completed check
 }//End lockout
 
@@ -321,26 +355,28 @@ void headerdisplay(int stringsize, char message[stringsize+1]){
   printf("----------------\n");
   printf("%s\n",message);
   printf("----------------\n\n");
+
 }//End Header display
 
 
 /*
 Inputs: The high and low of the chosen range and the number to check
-Outputs: The checked input, determined to be a intiger within the range
+Outputs: The checked input, determined to be a integer within the range
 
 Description: When given a high and low range, this will detect if the user has given a number outside that range, or has given a character. It will then prompt re-entry
 */
-int intiger_Error_Checking_Within_Range_No_Char(int rangelow, int rangehigh, int input){
+int integer_Error_Checking_Within_Range_No_Char(int rangelow, int rangehigh, int input){
 
   //Error Checking
   while (!(input >= rangelow && input <= rangehigh)){
-    printf("Error: this is an invalid element. Please re-enter a NUMBER between %d and %d.\n",  rangelow, rangehigh);
+    printf("Error: this is an invalid element. Please re-enter a NUMBER between %d and %d.\n\a",  rangelow, rangehigh);
     scanf("%d", &input);
     while (getchar() !='\n');
     printf("\n");
   }//End Error Checking
 
 return input;
+
 }//End Error Checking Util Function
 
 
@@ -351,7 +387,7 @@ Outputs: A boolean, 1 being "it is within array" 0 being "it is not within the a
 Description: When given an array, this will check if the given element is inside this array
 */
 int is_element_in_array_same(int array[], int check_element, int arraysize){
-  int i;
+  register int i;
 
   //Checkes target element against array
   for (i=0; i<arraysize ;i++){
@@ -361,6 +397,7 @@ int is_element_in_array_same(int array[], int check_element, int arraysize){
   }//End array check
 
   return 0;
+
 }//End parity check
 
 
@@ -371,7 +408,7 @@ Outputs: Displays the array to standard output
 Description: When given an array, this will spit out a 'nicely' formatted array
 */
 void display_Array(int array[], int arraysize, char arrayname[]){
-  int i;
+  register int i;
   int display_i;
 
   printf("Contents of %s\n",arrayname);
@@ -383,6 +420,7 @@ void display_Array(int array[], int arraysize, char arrayname[]){
 
   printf("\n\nPress enter to continue");
   getchar();
+
 }//End display_Array
 
 
@@ -396,12 +434,13 @@ void swap(int* a, int* b){
   int t = *a;
   *a = *b;
   *b = t;
+
 }//End Swap
 
 
 /*
 Inputs: The array itself, the highest index and the lowest index
-Ouputs: sorted value
+Outputs: sorted value
 
 Description: A pre-sort algorithim that takes the last element as a pivot, places that element in the 'correct' position
 then places all smaller values to the left of the pivot. Leaving all greater values to the right of the pivot
@@ -410,12 +449,12 @@ then places all smaller values to the left of the pivot. Leaving all greater val
 Note: This is based on an algorithim in Introduction to Algorithims by:
 Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest and Clifford Stein (ISBN: 978-0-262-03384-8) (page 149)
 */
-int partiton (int array[], int lowindex, int highindex){
+int partition (int array[], int lowindex, int highindex){
     //pivot
     int pivot = *(array + highindex);
 
     //Index of smaller element
-    int i = (lowindex - 1);
+    register int i = (lowindex - 1);
 
     for (int j = lowindex; j <= highindex- 1; j++){
 
@@ -431,12 +470,13 @@ int partiton (int array[], int lowindex, int highindex){
 
     swap(&*(array + i + 1), &*(array + highindex));
     return (i + 1);
+
 }//End partition
 
 
 /*
 Inputs: The array itself, the starting index, the last index
-Ouputs: N/A
+Outputs: N/A
 
 Description: Using partition, this will quickily and efficiently sort from lowest to highest. This is achieved by recursivly running
 the function partition until the last index is greater then the starting index.
@@ -447,10 +487,11 @@ Thomas H. Cormen, Charles E. Leiserson, Ronald L. Rivest and Clifford Stein (ISB
 void quickSort(int array[], int lowindex, int highindex){
   if (lowindex < highindex){
       //Pi being partitioning index, continues until the centrepoint of the array is at the right place
-      int pi = partiton(array, lowindex, highindex);
+      int pi = partition(array, lowindex, highindex);
 
       //Recursivly Sorts before and after partition
       quickSort(array, lowindex, pi - 1);
       quickSort(array, pi + 1, highindex);
+
   }//End proc if
 }//End Quicksort
