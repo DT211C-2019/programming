@@ -429,7 +429,7 @@ int partiton (int array[], int lowindex, int highindex){
         }//End smaller-than if
     }//End index for
 
-    swap(&array[i + 1], &array[highindex]);
+    swap(&*(array + i + 1), &*(array + highindex));
     return (i + 1);
 }//End partition
 
