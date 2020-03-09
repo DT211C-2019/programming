@@ -158,9 +158,9 @@ printf("Please enter %d numbers between %d and %d\n",NO_OF_INPUTS, MIN_PREDEFINE
 
     //Checks to see if the inputted number is the same as any of the numbers in the array, prevents this
     while (is_element_in_array_same(input_Num, input, arraysize) == 1){
-      input = integer_Error_Checking_Within_Range_No_Char(MIN_PREDEFINED_RANGE, MAX_PREDEFINED_RANGE, input);
       printf("Error: You have entered the same number twice, please enter a different number\n\a");
       scanf("%d", &input);
+      printf("\n");
       while (getchar() !='\n');
       input = integer_Error_Checking_Within_Range_No_Char(MIN_PREDEFINED_RANGE, MAX_PREDEFINED_RANGE, input);
     }//End check if the element is the same as any others check
@@ -168,6 +168,7 @@ printf("Please enter %d numbers between %d and %d\n",NO_OF_INPUTS, MIN_PREDEFINE
     //Enters chosen number into array
     *(input_Num + i) = input;
     *(frequency_of_Num + input) = *(frequency_of_Num + input)+1;
+    input = 0;
 
   }//End Input for
 }//End Input
