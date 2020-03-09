@@ -9,7 +9,6 @@ It will present the user with a main menu where they can choose between 4 differ
 	Author
 Paul Geoghegan
 	Compiler
-mingw gcc
 	Date
 07/11/19
 */
@@ -36,6 +35,7 @@ int main()
 	srand((unsigned) time(&t));
 
 	//initialises variables for use in do while loop
+mingw gcc
 	loop = 'y';
 	correct = wrong = option = amount = total = temp = 0;
 	op1 = false;
