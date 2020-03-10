@@ -7,7 +7,6 @@ Date of Last Edit: 10/11/19
 Compiler: GCC (mingw)
 OS: Windows 10
 */
-//TODO: Add /a to all errors
 
 //Headers
 #include <stdio.h>
