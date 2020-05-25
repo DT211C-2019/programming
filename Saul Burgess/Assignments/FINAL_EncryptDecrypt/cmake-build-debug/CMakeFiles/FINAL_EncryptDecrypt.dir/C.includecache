@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Solon/OneDrive - Technological University Dublin/College Projects/programming/Saul Burgess/Assignments/FINAL_EncryptDecrypt/exam.c
+stdio.h
+-
+stdlib.h
+-
+time.h
+-
+

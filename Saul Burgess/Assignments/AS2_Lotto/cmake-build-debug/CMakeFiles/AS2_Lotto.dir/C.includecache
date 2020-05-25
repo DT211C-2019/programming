@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/Solon/OneDrive - Technological University Dublin/College Projects/programming/Saul Burgess/Assignments/AS2_Lotto/assignment2.c
+stdio.h
+-
+stdlib.h
+-
+unistd.h
+-
+string.h
+-
+

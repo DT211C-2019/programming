@@ -1,6 +1,6 @@
 /*
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Summary: A program which plays a lotto game with a predetermined set of mumbers. The program will allow entry of six numbers, display these in a 1D array with pointer notation, sort the contents of the array
+Summary: A program which plays a lotto game with a predetermined set of numbers. The program will allow entry of six numbers, display these in a 1D array with pointer notation, sort the contents of the array
 in ascending order and compare the contents of the input array to the given Lotto number, then displaying the frequency of all inputted data sets.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Date of Last Edit: 10/11/19
