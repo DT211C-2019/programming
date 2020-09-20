@@ -1,0 +1,59 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.16"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0
+					],
+					"name" : "FINAL_EncryptDecrypt",
+					"targetIndexes" : 
+					[
+						0
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "FINAL_EncryptDecrypt::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-FINAL_EncryptDecrypt-Debug-2d46d980435f0b2428f5.json",
+					"name" : "FINAL_EncryptDecrypt",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "C:/Users/Solon/OneDrive - Technological University Dublin/College Projects/programming/Saul Burgess/Assignments/FINAL_EncryptDecrypt/out/build/x64-Debug (default)",
+		"source" : "C:/Users/Solon/OneDrive - Technological University Dublin/College Projects/programming/Saul Burgess/Assignments/FINAL_EncryptDecrypt"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 0
+	}
+}
