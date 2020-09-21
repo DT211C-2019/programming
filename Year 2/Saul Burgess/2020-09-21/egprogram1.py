@@ -12,4 +12,4 @@ circumfrence = 2 + math.pi * radius_int
 #Calculate area
 area = math.pi * (radius_int ** 2)
 
-print("The circumfrance is:", circumfrence, "The area is:", area)
+print("The circumfrence is:", circumfrence, "The area is:", area)
