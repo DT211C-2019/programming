@@ -1,0 +1,293 @@
+What is  Computer Science?
+
+1
+
+Computer science is a discipline that involves the understanding and design of computers and computational processes.
+
+A well-educated computer scientist should be able to…
+
+apply the fundamental concepts and techniques of 
+computation, 
+algorithms, and 
+computer design 
+to a specific problem
+
+2
+
+…including
+
+Collecting specifications
+Analysing the problem
+Providing a design: 1) that functions as desired, 2) has satisfactory performance, 3) is reliable and maintainable 
+and 4) meets desired cost criteria
+
+3
+
+Aspects of Computer Science
+
+Theory of computation
+Computational Efficiency
+Algorithms and Data Structures
+Parallel Processing
+Software Engineering
+Others…
+
+4
+
+Our goals
+
+Our goals are not to just write copious amounts of code, but also to:
+
+increase our problem solving skills
+design good solutions to problems
+test somehow how well they are indeed solutions to the problem
+provide the solution as a readable document
+
+5
+
+This is hard!
+Practice, practice, practice…
+
+6
+
+An analogy
+Let us say that you have signed up to study French poetry in the original 
+
+You have two problems:
+you don’t speak French
+you don’t know much about poetry
+
+7
+
+How does this apply
+You have two related problems:
+the syntax of French is something you have to learn
+the semantics of poetry is something you have to learn
+You have two problems you have to solve at the same time.
+
+8
+
+Programming, Syntax and Semantics
+You have to learn the syntax of a particular programming language
+many details about the language, how to debug and use it
+
+You have to learn about problem solving and how to implement it so a computer would understand it
+
+There probably is no better way. It’s hard!
+
+9
+
+Computers and problem solving?
+This is both the problem and difficulty of computers.
+
+The promise (hope) of computers is that, somehow, we can embed our own thoughts in them. 
+To some extent we can!
+
+The problem is the difficulty of doing so, and the strict requirements, the real effort required to put simple thoughts into a working program.
+
+10
+
+Focus of Computer Science
+
+There are two things computer science focuses on
+
+Learning the difficult task of truly “laying out” a problem-solving task
+
+Providing tools to make this process as easy (though it will never be “easy”) as possible.
+
+Your focus should be on problem-solving
+
+11
+
+Good Program (1)
+What makes a good program?
+
+A program is a reflection of the writer and their thoughts
+First, you must have some thoughts! The difficulty for most people is to figure out what has to be done, the problem solving, before writing a program
+
+12
+
+Rule 1
+Think before you program!
+
+13
+
+Good Program (2)
+It will be said repeatedly that the goal of a program is not to run, but to be read
+A program communicates with other people as well. It stands as a document to be read, modified, and, yes, run
+
+14
+
+Rule 2
+A program is a human-readable essay on a problem solving that also happens to execute on a computer.
+
+15
+
+Why Python?
+Reasons for using Python
+
+Simpler
+Best practices
+Open source
+Useful
+
+16
+
+Why Python (1): Simpler
+Python is a simpler language (low “cognitive load” for the student)
+Fewer alternatives (one way to do it)
+Better alternatives (easier to accomplish common tasks)
+This allows us to focus less on the language and more on problem solving
+
+17
+
+Why Python(2): Best Practices
+Many of the best parts of other languages are included in Python
+data structures (lists, dictionaries)
+control (iteration, exceptions)
+many packages for common tasks
+
+Python is often described as "batteries included"
+
+18
+
+Why Python (3): Open source
+Python is open source:
+freely available 
+large user base constantly contributing
+new packages available to meet changing needs
+
+19
+
+Why Python (4): Useful 
+As a result, Python is more generally “useful” for getting work done quickly.
+
+Hopefully having finished this module you’ll have the following thought when approaching new problems
+“Hey, I’ll just write a program for that”. 
+
+That is “computational thinking”. Python allows this to happen more readily.
+
+20
+
+Is Python the best language?
+There is no “best language”
+
+Computer languages, like tools, are suited for different tasks (What’s the best shovel? Depends on what you are doing)
+
+Python is a very good language for introducing programming and OOP concepts
+
+21
+
+Introduction to Python
+
+22
+
+Computer Languages
+
+Python: higher level, good for scripts
+Java: higher level, good for applications
+C, C++: high level, good for applications and systems
+Assembly languages: higher level, good for specialized tasks
+Machine languages: lower level
+
+23
+
+In order for the computer to be able to run a program, it needs to be translated from a higher level code to machine code
+
+Compilation and Interpretation
+Complied languages – produce executable
+C/C++ → .exe file
+Java → .class file
+
+Interpreted languages
+Translated “on-the-fly”
+No executable
+Python
+
+24
+
+A Python Program
+
+25
+
+1       # Our first Python program
+2
+3       from math import pi
+4       r = 12
+5       area = pi * r ** 2
+6       print("The area of a circle with radius", r, "is", area)
+
+What does this program do?
+
+26
+
+Variables
+Variables - refer to data in the memory
+
+Variable names (identifiers)
+You can name them as you wish – A-Z, a-z, 0-9 and _
+Small set a reserved as keywords
+
+
+27
+
+Variables
+Variables - refer to data in the memory
+variable names (identifiers)
+You can name them as you wish – A-Z, a-z, 0-9 and _
+Small set a reserved as keywords
+
+1       # Our first Python program
+2
+3       from math import pi
+4       r = 12
+5       area = pi * r ** 2
+6       print("The area of a circle with radius", r, "is", area)
+
+28
+
+Statements
+
+A program is a sequence of statements that Python interprets and executes
+
+1       # Our first Python program
+2
+3       from math import pi
+4       r = 12
+5       area = pi * r ** 2
+6       print("The area of a circle with radius", r, "is", area)
+
+29
+
+Statements
+A program is a sequence of statements that Python interprets and executes
+
+Import – access standard libraries
+
+Assignment – assign (give) a  variable a value
+
+Print – create output
+
+30
+
+Data Types, Expressions and Comments
+Data types
+String, Integer, Float, etc.
+
+Expressions
+Something to evaluate, e.g. input, numeric using arithmetic operations (+, -, *, **, /, //)
+
+Comments
+# - single line comment
+Not interpreted, everything after the # is ignored
+It is very important to document your code! 
+
+31
+
+PyCharm
+PyCharm is an Integrated Development Environment (IDE)
+Free education license
+
+32
+
+Questions?
