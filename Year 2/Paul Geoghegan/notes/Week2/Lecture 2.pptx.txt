@@ -1,0 +1,683 @@
+1
+
+Python Basics
+
+2
+
+What is a Computer Program
+A program is a sequence of instructions.
+To run a program is to:
+-> create the sequence of instructions according to your design and the language rules
+-> turn that program into the binary commands the processor understands
+-> give the binary code to the OS, so it can give it to the processor
+-> OS tells the processor to run the program
+-> when finished (or it dies :-), OS cleans up.
+
+3
+
+Interpreted Languages
+
+Python is an interpreted language interpreted means that Python looks at each instruction, one at a time, and turns that instruction into something that can be run
+
+You can simply open the Python interpreter and enter instructions one-at-a-time.
+
+You can also import a program which causes the instructions in the program to be executed, as if you had typed them in.
+
+To re-run an imported program you reload it.
+
+4
+
+Python Example
+
+import math
+
+# Read radius from user
+radius_str = input("Enter the radius of your circle: ")
+
+# Convert radius to integer
+radius_int = int(radius_str)
+
+# Calculate circumference
+circumference = 2 + math.pi * radius_int
+
+# Calculate area
+area = math.pi * (radius_int ** 2)
+
+print("The circumference is:", circumference, ", and the area is: ", area)
+
+5
+
+Getting input
+
+The function:
+
+		input(“Enter a value”)
+
+prints “Enter a value” on the python screen and waits till the user types something (anything), ending with Enter
+
+Warning:
+	it returns a string (sequence of characters), no matter what is given, even a number ('1' is not the same as 1, different types)
+
+6
+
+import
+
+import – imports a module
+
+import math
+
+Usage 
+	math.xxx
+
+Examples
+	math.pi
+	math.pow(x,y) 
+
+7
+
+Assignment operator =
+
+The = sign is the assignment statement
+
+The value on the right is associated with the variable name on the left
+
+It does not stand for equality!
+
+8
+
+Conversion between types
+
+Convert from string to integer
+
+	input_str = input(“Enter a number”)
+	input_int = int(input_str)
+ 
+Once converted, we can do math on the integers	
+
+>>> input_str = input("Enter a number: ")
+Enter a number: 3
+>>> input_str + input_str
+'33'
+>>> input_int = int(input_str)
+>>> input_int + input_int
+
+9
+
+Printing output - print
+
+print 
+
+takes a list of elements in parentheses separated by commas
+if the element is a string, prints it as is
+if the element is a variable, prints the value associated with the variable
+after printing, moves on to a new line of output
+
+	my_var = 12
+	print('My var has a value of: ', myVar)
+
+10
+
+print
+
+WARNING:
+different syntax of the print command in the different versions of Python
+
+Python 2 		print “hello”
+
+Python 3		print(“Hello”)
+
+11
+
+At the core of any language
+Control the flow of the program
+Construct and access data elements
+Operate on data elements
+Construct functions
+Construct classes
+Libraries and built-in classes
+
+12
+
+Save as a “module”
+When you save a file, such as our first program, and place a .py suffix on it, it becomes a python module
+
+You run the module from the IDLE menu to see the results of the operation
+
+A module is just a file of python commands
+
+13
+
+Type of Errors
+
+Syntax errors
+Syntax mistake in your code, e.g. missing comma, wrong indentation, etc.
+
+Runtime errors
+Appear after the program is run (and usually depend on inputs), e.g. division by zero
+
+Semantic (logical) errors
+Problems with the algorithm – program runs and produces results but it’s not correct
+
+14
+
+Common Error
+Using IDLE, if you save the file without a .py suffix, it will stop colorizing and formatting the file
+
+Re-save with the .py, everything is fine
+
+15
+
+Modules
+
+A Python program is:
+A module (perhaps more than one)
+Each module has python statements
+Each statement has expressions 
+
+There are modules provided by Python to perform common tasks (math, database, web interaction, etc.)
+
+The wealth of these modules is one of the great features of Python
+
+16
+
+Statements
+
+Statements are commands in Python.
+
+They perform some action, often called a side effect,  but they do not return any values
+
+17
+
+Expressions
+
+Expressions perform some operation and return a value
+
+Expressions can act as statements, but statements cannot act as expressions (more on this later).
+
+Expressions typically do not modify values in the interpreter
+
+18
+
+Side effects and Returns
+
+What is the difference between side effect and return?
+
+1 + 2 
+returns a value (it's an expression). You can “catch”/assign the return value. However, nothing else changed as a result
+
+print("hello") 
+doesn't return anything, but the side effect did happen. Something printed!
+
+19
+
+Whitespace
+white space are characters that don't print (blank spaces, tabs, etc.)
+
+White spaces in expressions are ignored
+	x=y+3 and x = y + 3 is the same
+
+Empty lines are treated as a whitespace and are ignored
+
+Leading whitespaces define indentation and have a special role in Python to group blocks of code
+
+20
+
+Indentation
+
+Indenting blocks of code is considered “good practice” in many programming languages
+
+Python requires indentation for blocks
+
+Number of spaces used for Indentation should be consistent throughout the program
+
+Advantages: forces readability of code
+
+21
+
+Continuation
+
+Using \ allows you to split a long line across several lines. Python treats is as a single line
+
+	print("Print this on", \
+	"the same line")
+
+prints
+
+	Print this on the same line
+22
+
+Python comments
+Line comments - #
+everything after the # is ignored by the interpreter
+
+	
+Comments are VERY IMPORTANT! Your code should be readable
+
+23
+
+Keywords
+
+A set of keywords are reserved in Python for special purpose, and are not allowed as variable names
+
+and
+del
+from
+not
+while
+as
+elif
+global
+or
+with
+assert
+else
+if
+pass
+yield
+break
+except
+import
+print
+class
+exec
+in
+raise
+continue
+finally
+is
+return
+def
+for
+lambda
+try
+
+24
+
+Python Operators
+
+Reserved operators in Python (expressions)
+
++
+-
+*
+**
+/
+//
+%
+<<
+>>
+&
+|
+^
+~
+<
+>
+<=
+>=
+==
+!=
+<>
+
+25
+
+Python Punctuators
+
+Python punctuation/delimiters ($ and ? not allowed). 
+
+'
+“
+#
+\
+(
+)
+[
+]
+{
+}
+@
+,
+:
+.
+`
+=
+;
++=
+-=
+*=
+/=
+//=
+%=
+&=
+|=
+^=
+>>=
+<<=
+**=
+
+26
+
+Literals
+Literal is a programming notation for a fixed value.
+
+For example, 123 is a fixed value, an integer
+the symbol 123's value can’t change to be 3.14, for example!
+
+27
+
+Naming Conventions
+Must begin with a letter or underscore _
+Ab_123 is OK, but 123_ABC is not
+
+May contain letters, digits, and underscores
+this_is_an_identifier_123
+
+May be of any length
+
+Case sensitive
+Length_Of_Rope is not length_of_rope
+
+Warning: 
+names starting with _  (underline) have a special meaning. Be careful!
+
+28
+
+Naming Conventions
+Fully described by PEP8 or Google Style Guide for Python 
+https://www.python.org/dev/peps/pep-0008/
+
+Uses “lower with under” - lower case with separate words joined by an underline:
+this_is_a_var
+my_list
+square_root_function
+
+29
+
+Variables
+A variable is a name we designate to represent an object (number, data structure, function, etc.) in our program
+
+We use names to make our program more readable, so that the object is easily understood in the program
+
+30
+
+Variable Objects
+
+Python maintains a list of pairs for every variable:
+variable's name
+variable's value
+
+A variable is created when a value is assigned the first time. It associates a name and a value
+subsequent assignments update the associated value. 
+we say name references value
+
+my_int = 7 means the variable whose is my_int it associated to the value 7
+
+31
+
+Namespace
+A namespace is the table that contains the association of a name with a value
+Essential part of the language
+
+32
+
+= is assignment
+In many computer languages = means assignment.
+my_int = my_int + 7
+lhs = rhs
+
+What assignment means is:
+evaluate the rhs of the =
+take the resulting value and associate it with the name on the lhs
+
+33
+
+More Assignment
+
+Example: 
+	my_var = 2 + 3 * 5
+
+evaluate expression (2+3*5): 17
+
+change the value of my_var to reference 17
+
+Example (my_int has value 2): 
+	my_int = my_int + 3
+
+evaluate expression (my_int + 3): 5
+change the value of my_int to reference 5
+
+34
+
+Namespace
+
+Figure illustratring the following operations
+a_int = 7
+b_float = 2.5
+a_int = b_float
+
+First the name a_int is associated with the value 7
+Second, the name b_float is associated with the value 2.5
+Third, a_int is associated to the same value associated to the b_float, which is in this case 2.5. 
+In other words, after the third operation a_int and b_float will be associated to the same value.
+
+35
+
+Variables and Types
+
+Python does not require you to pre-define what type can be associated with a variable
+
+What type a variable holds can change!
+
+Nonetheless, knowing the type can be important for using the correct operation on a variable. Thus proper naming is important!
+
+36
+
+What can go on the lhs
+
+There are limits therefore as to what can go on the lhs of an assignment statement.
+
+The lhs must indicate a name with which a value can be associated
+
+my_int = 5		Yes
+my_int + 5 = 7		No
+
+37
+
+Python “types”
+integer: 5
+
+float: 1.2
+
+boolean: True
+
+strings: "anything" or 'something’
+
+lists: [,]  ['a',1,1.3]
+
+dictionaries {"a":1, "b":2, 3.145:"c"}
+
+38
+
+What is a type
+
+A type in Python essentially defines two things:
+the internal structure of the type (what is contains)
+the kinds of operations you can perform
+
+
+Examples:
++ - works differently on strings and integers
+'abc'.capitalize() is a method you can call on strings, but not integers
+
+39
+
+Fundamental Types
+Integers
+
+1, -27 (to +/- 2^32 – 1)
+123L - L suffix means any length, but potentially very slow. Python will convert if an integer gets too long automatically
+
+Floating Point (Real)
+3.14, 10., .001, 3.14e-10
+
+Booleans 
+True, False
+
+40
+
+Type conversion
+int(some_var) -> returns an integer
+float(some_var) -> returns a float
+str(some_var) -> returns a string
+
+For example
+
+int(2.1) → 2, int('2') → 2, but int('2.1') fails
+
+float(2) → 2.0, float('2.0') → 2.0, float('2') → 2.0, float(2.0) → 2.0
+
+str(2) → '2', str(2.0) → '2.0', str('a') → 'a'
+
+41
+
+Operators
+
+Integer
+
+addition and subtraction: +, -
+multiplication: *
+division 
+quotient : /
+integer quotient: //
+remainder: %
+
+Floating point
+add, subtract, multiply, divide: +, -, *, /
+
+42
+
+Two types of division
+The standard division operator (/) yields a floating point result no matter the type of its operands:
+2/3 	🡺 yields 0.6666666666666666
+4.0/2	🡺 yields 2.0
+
+Integer division (//) yields only the integer part of the divide (its type depends on its operands):
+2//3	🡺 0
+4.2//2	🡺 2.0
+
+43
+
+Modulus Operator
+The modulus operator (%) give the integer remainder of division:
+5 % 3	🡺 2
+7.0 % 3	🡺 1.0
+
+Again, the type of the result depends on the type of the operands.
+
+44
+
+Mixed Types
+What is the difference between 42 and 42.0 ?	
+	their types: the first is an integer, the second is a 	float
+
+What happens when you mix types:
+	done so no information is lost
+
+42 * 3 🡺 126
+42.0 * 3 🡺 126.0
+
+45
+
+Order of operations and parentheses (from top to bottom)
+
+() 🡺 Parenthesis (grouping)
+** 🡺 Exponentiation
++x, -x 🡺 positive, negative
+*,/,%,// 🡺 Multiplication, division, remainder, quotient
++,- 🡺 Addition, subtraction
+
+46
+
+Shortcuts
+Shortcuts combine an operation and reassignment to the same variable
+useful for increment/decrement
+
+my_int += 2 equivalent to my_int = my_int + 2
+my_int -= 2 equivalent to my_int = my_int - 2
+my_int *= 2 equivalent to my_int = my_int * 2
+my_int /= 2 equivalent to my_int = my_int / 2
+
+47
+
+Modules
+Modules are files that can be imported into your Python program.
+use other well proven code with yours
+break your program into logical units
+
+Use import with the module name to use the module’s contents
+
+Use the name of the module when accessing its content
+
+48
+
+math module
+import math
+
+print(math.pi)    # constant in math module
+print(math.sin(1.0))   # a function in math
+help(math.pow)    # help info on pow
+
+49
+
+Develop an Algorithm
+How do we solve the following?
+
+How many liters of water fall on an acre of land given the number of cm of rain that fell*? For example, how many liter for 1 cm, 2 cm, etc.?
+
+* Cm of rain that fell means rain has accumulated to a depth of 1 cm over a certain area.
+
+50
+
+Algorithm
+A method – a sequence of steps – that describes how to solve a problem of class of problems
+
+1. Prompt the user for the number of cm that have fallen.
+2. Find the volume (in cubic meters) of water (where volume = depth * area).
+3. Convert the volume (in cubic meters) to liters.
+
+1 acre = 4046.86 square meter
+1 cubic meter = 1000 liters
+
+41
+
+Example – compare both
+
+# Calculate rainfall in liters for some number of cm on 1 acre
+cm_str = input("How many cm of rain have fallen: ")
+cm_int = int(cm_str)
+# cm of depth (0.01 meters) * 1 acre of area (4046.86 square meters)
+volume = cm_int * 0.01 * 4046.86
+# convert the volume in cubic meters to liters
+liters = volume * 1000
+print(cm_int, "cm rain on 1 acre is", liters, "liters")
+
+# Calculate rainfall in liters for some number of cm on 1 acre
+cm_str = input("How many cm of rain have fallen: ")
+cm_float = float(cm_str)
+# cm of depth (0.01 meters) * 1 acre of area (4046.86 square meters)
+volume = cm_float * 0.01 * 4046.86
+# convert the volume in cubic meters to liters
+liters = volume * 1000
+print(cm_float, "cm rain on 1 acre is", liters, "liters")
+
+52
+
+Good programming practice
+
+Test your code, often and thoroughly!
+
+One thing we learn in writing our code is that we must test it, especially against a number of conditions, to assure ourselves that it works
+
+53
+
+Questions?
+

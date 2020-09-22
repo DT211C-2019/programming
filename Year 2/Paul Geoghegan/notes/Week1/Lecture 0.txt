@@ -1,0 +1,138 @@
+CMPU 2016
+Object Oriented Programming
+DT 211C
+Lucas Rizzo
+
+e-mail: lucas.rizzo@tudublin.ie
+
+About me
+
+Recent PhD graduate from TU Dublin.
+
+I’m from Belo Horizonte - Brazil and I have been living in Dublin since 2015.
+
+My research focus is on Artificial Intelligence, more specifically automated reasoning and computational models of argument.
+
+If you are interested in these topics you can have a look at my website http://lucasrizzo.com/
+
+Classes Timetable
+Lectures – 2 one-hour lectures
+Monday 9-10am (online)
+Monday 1-2pm (online)
+
+Tutorial
+Tuesday 2-3pm (online)
+
+Lab
+Thursday 2-4pm (Kevin Street and online)
+
+Lectures, tutorials and labs might all be quite similar. Overall the goal is to code as much as possible.
+
+Materials available through Brightspace
+
+Search for Object Oriented Programming CMPU2016,
+brightspace.tudublin.ie, lecturer Lucas Rizzo
+
+Communication statement
+
+We should communicate primarily through email: lucas.rizzo@tudublin.ie
+
+You can send me emails any time, and it should be answered in 1 or 2 days maximum.
+
+Labs will be face to face, so of course we can also have a chat during labs.
+
+Pay attention to announcements for this module in Brightspace! That is how I will let you know about updates or any recent changes in the module.
+
+During online lectures please try to participate as much as possible in the chat or interrupt any time with a microphone if you feel so. 
+
+Module content
+
+Python basics
+Revision of programming fundamentals through Python: controls, strings, data structures
+Procedural vs OOP languages
+Streams and files
+Overloading
+Testing and debugging techniques
+Exception handling
+Object-Oriented Principles and Concepts
+Classes and objects, private and public class members, constructors
+Composition
+Inheritance
+Polymorphism 
+Good programming practices
+
+Module content in Brightspace
+
+Assessment
+This module is split into two parts 
+semester 1 (Python) 
+semester 2 (Java)
+
+Continuous assessment – 50%
+For semester 1 – two lab tests (to be done during lab hours)
+For semester 2 – It is up to Dr. Susan Mckeever
+
+Exam in semester 2 – 50%
+One exam: half Python, half Java.
+You need 40% to pass the module.
+
+Plagiarism is a serious offence!
+
+Proposed schedule (might change throughout the course)
+
+21/09
+Intro to programming
+Basics Python
+
+28/09
+Control
+
+05/10
+Strings
+
+12/10
+Functions, lists
+
+19/10
+Tuples, files and error handling
+
+26/10
+Dictionary. Sets
+
+02/11
+Review/Practice and Lab assessment
+
+09/11
+More on functions
+
+16/11
+Classes
+
+23/11
+More classes and overload
+
+30/11
+OOP Inheritance
+
+07/12
+Review and practice
+
+14/12
+Review/practice and Lab assessment
+
+Labs: PyCharm or any other Python IDE you prefer.
+PyCharm is an Integrated Development Environment (IDE)
+Free education license
+
+Any computer should be enough for this module.
+
+Online Resources
+Huge amount of online resources!
+
+For example:
+
+https://jupyter.org
+ 
+https://codingbat.com/python
+
+http://www.tutorialspoint.com/python/index.htm
