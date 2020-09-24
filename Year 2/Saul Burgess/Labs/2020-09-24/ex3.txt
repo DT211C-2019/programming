@@ -1,0 +1,55 @@
+1. A python indicates a line of text usually used for the purpose of documentation or explanation, it is signified by starting a line with '#'
+
+2. A 'namespace' is a term for assigning unique names to objects, an object can be a variable or a method.
+
+3. 
+(a): Ends of lines
+(b): Nested statements like (cat +
+                                    dog)
+
+4. 
+(a): float / integer = float : integer / float = float
+(b): In almost all calculations when a float and integer are divised (except when divised by itself, which is impossible in this case) a fraction will remain
+
+5. No that same substitution is not valid
+
+6. 
+    user_input = int(input("Please enter a number: "))
+
+    answer = (((user_input+2)*3)-6)/3
+
+    print("You entered", user_input, "The result was", answer)
+
+7. 
+(a): 8, as you are adding the variable my_int (containing 5) to the numerical value 3 and then copying that back into my_int, you then print this variable
+(b):    my_int = 5
+        my_int += 3
+        print(my_int)
+
+8. 1.4
+
+9. String
+
+10. You get the error "TypeError: can't multiply sequence by non-int of type 'str'" this because strings are not numberic values and arithmetic operations cannot be applied to them
+
+11. 
+    input = int(input("Please enter a number: "))
+    input %= 2
+    print(input)
+
+12. 
+(a): 
+    inputWeight = int(input("Please enter your weight: "))
+    inputHeight = int(input("Please enter your height: "))
+
+    answer = inputWeight / inputHeight ** 2
+
+    print(answer)
+
+(b): 
+    inputWeight = int(input("Please enter your weight in pounds: "))
+    inputHeight = int(input("Please enter your height in inches: "))
+
+    answer = (inputWeight * 0.453592) / (inputHeight * 2.54) ** 2
+
+    print(answer)
