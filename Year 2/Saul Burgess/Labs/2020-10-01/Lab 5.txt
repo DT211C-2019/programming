@@ -1,0 +1,183 @@
+1. 
+    #Grabs user values, then converts them to an int
+    user_input = int(input("Please enter your grade (between 0 and 100): "))
+
+    #Checks if the input is above or below 40%, then informs the user whether it is a pass or fail
+    if user_input >= 40:
+        print("You passed")
+    else:
+        print("You failed")
+
+2.
+    #Grabs user values, then converts them to an int
+    user_input_a = int(input("Please enter the first number: "))
+    user_input_b = int(input("Please enter the second number: "))
+
+    #Compares values
+    if user_input_a > user_input_b:
+        print("Greater caught")
+
+    elif user_input_a == user_input_b:
+        print("Equal caught")
+
+    else:
+        print("Less caught")
+
+3.
+    #Grabs user values, then converts them to an int (except operator)
+    user_input_a = int(input("Please enter the first number: "))
+    user_input_operator = input("Please enter an operator: ")
+    user_input_b = int(input("Please enter the second number: "))
+
+    #Switch for handling operator
+    if user_input_operator == "+":
+        print("The answer is: ", user_input_a + user_input_b)
+
+    elif user_input_operator == "-":
+        print("The answer is: ", user_input_a - user_input_b)
+
+    elif user_input_operator == "*":
+        print("The answer is: ", user_input_a * user_input_b)
+
+    elif user_input_operator == "/":
+        print("The answer is: ", user_input_a / user_input_b)
+
+    else:
+        print("An invalid operator was entered.")
+
+4.
+    #Grabs user values, then converts them to an int
+    user_input_a = int(input("Please enter the first number: "))
+    user_input_b = int(input("Please enter the second number: "))
+    user_input_c = int(input("Please enter the third number: "))
+
+    #Does greater/less then, then prints
+    if user_input_a < user_input_b:
+        tmp = user_input_b
+    else:
+        tmp = user_input_a
+
+    if tmp < user_input_c:
+        print("The largest value is ", user_input_c)
+    else:
+        print("The largest value is ", tmp)
+
+5.
+    Two numbers are displayed
+
+(a): 4
+(b): 0
+(c): String
+(d): To store the casted int from user_str
+(e): To signify the end of the logical argument
+
+6. A
+    import sys
+
+    #User input
+    cigars = int(input("How many cigars do the squirrels have?: "))
+    day = input("Is it the weekend? Y/N: ")
+
+    #Checks if it is the weekend
+    if day == "Y":
+        print("True.")
+        sys.exit()
+
+    #If it's not a weekend, check the cigars
+    if  (cigars > 40) and (60 > cigars):
+        print("True.")
+    else:
+        print("False.")
+
+6. b
+    #User input
+    temperature = int(input("What is the temperature?: "))
+    season = input("Is it the summer? Y/N: ")
+
+    #Checks if it is the summer or winter
+    if season == "Y":
+        if  (temperature > 60) and (100 > temperature):
+            print("True.")
+        else:
+            print("False.")
+
+    else:
+        if  (temperature > 60) and (90 > temperature):
+            print("True.")
+        else:
+            print("False.")
+
+6. c
+    #User input
+    speed = int(input("What speed were you going?: "))
+    birthday = input("Is it your birthday? Y/N: ")
+
+   #Birthday helper!
+    if birthday == "Y":
+        birthmath = 5
+    else:
+        birthmath = 0
+
+    #Problem tree
+    if speed > 81 + birthmath:
+        print("2.")
+
+    elif (speed > 61+birthmath) and (80+birthmath > speed):
+        print("1.")
+
+    else:
+        print("0.")
+
+7. 
+    # Initial Variables
+    i = 100
+    ans = 0
+
+    # Calc loop
+    while i <= 999:
+        i += 1
+        if (i % 17) <= 0:
+            ans += 1
+
+    # Output
+    print("There are", ans, "divisible by 17 between 100 and 999.")
+
+8. (A)
+    # input
+    X = int(input("Enter an integer: " ))
+
+    # calc
+    i = 0
+    ans = 0
+    while (i < X):
+        ans += (i+1)
+        i += 1
+
+    # output
+    print("The answer is: ", ans)
+
+8. (B)
+    #input
+    X = int(input("Enter an integer: " ))
+
+    #calc
+    for i in range (1, X+1):
+        ans = range(1, i+1)
+        print(' + '.join(map(str, ans)), '=', sum(ans))
+
+8. (C)
+    #input
+    X = int(input("Enter an integer: " ))
+
+    #calc
+    i = 0
+    ans = 0
+    while (i < X):
+        ans += (i+1)
+        i += 1
+
+    #output
+    if (ans % X) == 0:
+        print("The answer is: ", ans)
+    else:
+        print("This sum is not divisable by the number of operands.")
