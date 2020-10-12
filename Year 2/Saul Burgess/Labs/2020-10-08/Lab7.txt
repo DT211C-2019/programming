@@ -1,0 +1,178 @@
+1.
+    string = "This is an example"
+    for i in string:
+        print (i)
+
+2.
+    string = input("Please enter a string: ")
+    j=0
+
+    for i in string:
+        j+=1
+
+    print("This string has", j, "characters in it.")
+
+3.
+    string = "Monty Python"
+
+    # Answer to A
+    print("The first character in the string is", string[1])
+
+    # Answer to B and C
+    print("The last character in the string is", string[len(string)-1])
+
+    # Answer to D
+    print("The word 'Monty' will now be printed: ")
+    for i in range(0, 5):
+        print(string[i], end='')
+
+4.
+    string = input("Please enter a string: ")
+    print_String = string[0] + string[1] + string[len(string)-2] + string[len(string)-1]
+    print("The first two letters, plus the last two letters is: ", print_String)
+
+5.
+    S = "This_is_a_string_of_odd_length."
+
+    #A
+    print("The middle character in this string is: ", S[round(len(S)/2)])
+
+    #B
+    print("The first half of this string is: ", end='')
+    for i in range(round(len(S)/2)):
+        print(S[i], end='')
+
+    #The lack of a newline looks ugly IMHO
+    print()
+
+    #C
+    print("The second half of this string is: ", end='')
+    for i in range(round(len(S)/2)+1, len(S)):
+        print(S[i], end='')
+
+6.
+(a): Makes the first letter in the string upper case
+(b): Changes lower case characters to upper case, and upper case characters to lower case
+(c): Makes all characters in the string upper case 
+(d): Makes all characters in the string lower case
+(e): Coverts the first character in each word to upper case
+
+7.
+    string = "I will now reverse this string! Hocus pokus, like magic!"
+    print("Normal: ", string)
+
+    #Reverse loop
+    gnirts = ""
+    for i in string:
+        gnirts = i + gnirts
+    print("Reversed: ", gnirts)
+
+8.
+    user_input = input("Please enter the string you want to encrypt: ")
+
+    encrypted_user_input = ""
+    for i in range(len(user_input)):
+        encrypted_user_input += chr(ord(user_input[i])+1)
+
+    print("The encrypted string is:", encrypted_user_input)
+
+9.
+    import string
+
+    #Grabs user entry
+    user_input = input("Please enter a string you wish to check for palandromes: ")
+
+    #Makes it lowercase, removes punctuation, and removes whitespace
+    user_input = user_input.casefold().strip('.').replace(" ", "").replace("'", "")
+
+    #Compares strings
+    if list(user_input) == list(reversed(user_input)):
+        print(user_input, "Is a palandrome")
+    else:
+        print(user_input, "Is not a palandrome")
+
+10. 
+    The count method returns the amount of times a string is seen in a given string
+
+11. 
+    The strip method removes any specified characters from the start and end of strings
+
+12.
+(a): You can use a for loop to add # eighty times, probably using string += "#"
+(b): Using a similar method as above, you can use the calculation 2^4*5 each 'number' being the string '#'
+
+13.
+    string = ab_string.replace("b", "")
+
+
+14. 
+    print("Melting and Boiling Points of Alkanes")
+    print("Name         Melting Point(deg C)        Boiling Point(deg C)")
+    print("Methane      -162                        -183")
+    print("Ethane       -89                         -172")
+    print("Propane      -42                         -188")
+    print("Butane       -0.5                        -135")
+
+15. 
+    import random
+    output = ''
+
+    #Grabs user input, then converts to a list
+    user_input = input("Please enter a string: ")
+    user_input = list(user_input)
+
+    #Swaps random elements of the list
+    user_input[random.randint(0, len(user_input)-1)] = user_input[random.randint(0, len(user_input)-1)]
+
+    #Converts result back to a string, then prints
+    print(output.join(user_input))
+
+16.
+    while(1):
+        #Grabs innitial entry
+        user_input = input("Please enter a string. You can enter a period (.) to end the program: ")
+
+        #If the user enters '.' the program will end
+        if user_input == '.':
+            print("Goodbye!")
+            break
+
+        #Sanatizes input
+        user_input = user_input.casefold()
+        user_input = list(user_input)
+        output=''
+
+        #Initiates the list for vowels / consenents
+        vowels = set("aeiou")
+        vowelsORconsenents = [0]*len(user_input)
+
+        #Generates a list containing the checked values of the input string to the same key as the input list
+        t=0
+        for i in user_input:
+            if (i=='a' or i=='e' or i=='i' or i=='o' or i=='u' ):
+                vowelsORconsenents[t] = 'v'
+        
+            elif i==' ':
+                vowelsORconsenents[t] = ' '
+
+            else:
+                vowelsORconsenents[t] = 'c'
+            t+=1
+
+        # Checks if rule 1 is true, then executes rule 1
+        if vowelsORconsenents[0] == 'v':
+            user_input += 'yay'
+            print("Rule 1 triggered: ", output.join(user_input), "\n")
+
+        #Checks if rule 2 is true, then executes rule 2
+        if vowelsORconsenents[0] == 'c':
+            t=0
+            for i in vowelsORconsenents:
+                if i == 'v':
+                    break
+                t+=1
+
+            temp = user_input[slice(t)]
+            user_input = user_input[slice(t, len(user_input))] + temp
+            user_input += 'ay'
+            print("Rule 2 triggered: ", output.join(user_input), "\n")
