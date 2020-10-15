@@ -1,0 +1,183 @@
+1.
+    def number_printer (max):
+    """When passed a number, will count then print that number from 1 - Input"""
+    for i in range(1, max+1):
+        print(i)
+        i+=1
+
+    #Driver
+    user_input = int(input("Please enter a number: "))
+    number_printer(user_input)
+
+2.
+    def number_printer_odd_or_even (max):
+    """When passed a number, this function will iterate from 0-Input while also displaying if the number is odd or even"""
+    for i in range(0, max+1):
+        if i % 2 > 0:
+            print(i, "Is odd")
+        else:
+            print(i, "Is even")
+
+    #Driver
+    user_input = int(input("Please enter a number: "))
+    number_printer_odd_or_even(user_input)
+
+3.
+    def number_printer_multiply_by_nine (max):
+    """When passed a number, will count then print that number from 1 - Input it will also multiply that number by 9 and print the result"""
+    for i in range(0, max+1):
+        print(i, "Multiplied by 9 is", i*9)
+
+    #Driver
+    user_input = int(input("Please enter a number: "))
+    number_printer_multiply_by_nine(user_input)
+
+4.
+    def number_printer_sum_of_range (max):
+    """When passed a number, this program will add 1 + any number between 1 and the input"""
+    output = sum(range(1,max+1))
+    print("The sume of numbers from 1 to", max, "is", output)
+
+    #Driver
+    user_input = int(input("Please enter a number: "))
+    number_printer_sum_of_range(user_input)
+
+5.
+   def number_printer_factorial (max):
+    """When passed a number, this function will print a factorial of that number"""
+
+    factorial=1
+    for i in range (1, max+1):
+        factorial *= i
+
+    print("The factorial of", max, "is", factorial)
+
+    #Driver
+    user_input = int(input("Please enter a number: "))
+    number_printer_factorial(user_input)
+
+6.
+    def string_printer_first_last_two_chars (string):
+    """
+    When passed a string, this function will return a string that is made up of
+    the first two characters and the last two characters. If the string has a
+    length of less then 4 the program will print an error message. 
+    """
+
+    if len(string) < 4:
+        return 0
+    
+    size = len(string)
+    string = list(string)
+
+    string = ''.join(string[0] + string[1] + string[size-2] + string[size-1])
+    return string
+
+
+
+    #Driver
+    user_input = input("Please enter a string: ")
+    output = string_printer_first_last_two_chars(user_input)
+
+    #Parses error return from the string
+    if output != 0:
+        print(output)
+    else:
+        print("You entered a string less then 4")
+
+7.
+    def string_remove_char_with_odd_index (string):
+    """
+    When given a string, this function will remove all chars with an odd index 
+    """
+
+    size = len(string)
+    string = list(string)
+    new_string = ''
+
+    for i in range(0, size):
+        string[i] = ord(string[i])
+
+        if string[i] % 2 == 0:
+            new_string += chr(string[i])
+
+    return new_string
+
+
+    user_input = input("Please enter a string: ")
+    output = string_remove_char_with_odd_index(user_input)
+    print(output)
+
+8.
+    def string_give_first_half (string):
+    """
+    When given a string, this will return the first half of the string 
+    """
+
+    size = len(string)
+    string = list(string)
+    new_string = ''
+
+    for i in range(0, round(size/2)):
+        new_string += string[i]
+
+    return new_string
+
+
+    user_input = input("Please enter a string: ")
+    output = string_give_first_half(user_input)
+    print(output)
+
+9.
+    def string_add_message_middle (string, message):
+    """
+    When given a string, this will add a chosen message in the middle of the
+    string
+    """
+
+    size = len(string)
+    string = list(string)
+    new_string = ''
+
+    for i in range(0, round(size/2)):
+        new_string += string[i]
+
+    new_string += message
+
+    for i in range(round(size/2), size):
+        new_string += string[i]
+    
+    return new_string
+
+
+    user_input = input("Please enter a string: ")
+    user_inputB = input("Please enter a message to be inserted into the middle: ")
+    output = string_add_message_middle(user_input, user_inputB)
+    print(output)
+
+10.
+    def string_remove_chunk (string, rmstart, rmend):
+    """
+    When given a string, this function will remove a chosen chunk from the
+    string
+    """
+
+    size = len(string)
+    string = list(string)
+    new_string = ''
+
+    for i in range(0, size):
+        if i not in range(rmstart, rmend+1):
+            new_string += string[i]
+
+    return new_string
+
+
+    string_input = input("Please enter a string: ")
+    rmstart = int(input("When in the string do you want to start removal?: " ))
+    rmend = int(input("When in the string do you want to end removal?: "))
+
+    output = string_remove_chunk(string_input, rmstart, rmend)
+
+    print("The new string is:", output)
+    
