@@ -1,0 +1,44 @@
+Lab 9 - Functions
+Submission:
+This lab has to be submitted on Week 7, together with all other labs published before Week 7. You will have to explain your code, so make sure it is well documented and you understand it.
+
+Questions:
+
+1. Write a function that takes a number as a parameter and prints the
+numbers from 1 to that number on the screen.
+
+2. Write a function that takes a number as a parameter and iterates from 0
+to that number. For each iteration, it will check if the current number is even or odd,
+and report that to the screen (e.g. “1 is odd”, “2 is even”).
+
+3. Write a function that takes a number as a parameter, iterates from 0 to
+that number, and for each iteration of the loop, multiplies the current number by 9
+and prints the result (e.g. “2 * 9 = 18”).
+
+4. Write a function that asks the user for a number and prints the sum of all
+numbers from 1 to the number they enter.
+
+5. Write a function to print a factorial of a number.
+
+6. Write a function that takes a string as a parameter and returns a string that is made up of the first two characters and the last two characters. If the string has a length less than 4 the program prints a message on the screen. For example: “hello there” will result in “here”
+
+7. Write a Python program to remove the characters which have odd index
+values of a given string. The function should return the new string.
+
+8. Write a Python function to get the first half of a specified string of even length.
+Sample function and result: 
+
+string_first_half(“Python”) 
+should return Pyt
+
+9. Write a Python function to insert a string in the middle of a string.
+Sample function and result: 
+
+insert_string_middle(“{{}}”,”PHP”)
+Should return {{PHP}}
+
+10. Write a Python function that takes a string and two indices, and returns
+a string with the part between the indices removed.
+For example: remove_substring(“Hello there”, 2, 6) should return “Hehere”
+
+
