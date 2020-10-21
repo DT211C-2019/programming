@@ -1,0 +1,52 @@
+Lab 10 - Lists
+Submission:
+This lab has to be submitted on Week 7, together with all other labs published before Week 7. You will have to explain your code, so make sure it is well documented and you understand it.
+
+Questions:
+
+1. Write a Python function to sum all numbers in a list.
+Sample list: [1, 2, 3, 4, 5, 6]
+Expected Output: 21
+
+2. Write a Python function to get the largest number from a list. 
+Sample list: [1, 2, 3, 4, 5, 6]
+Expected Output: 6
+
+3. Write a Python function that takes a list of words and counts how many
+of them begin with ‘o’.
+Sample list: ['Always', 'look', 'on', 'the', 'bright', 'side', 'of', 'life']
+Expected Output: 2
+
+4. (modify Ex3) Write a Python function that takes a list of words and a
+character, and counts how many of the words in the list begin with that character.
+
+5. Write a Python function that takes a list of numbers and returns a
+new list containing only the even numbers from the first list.
+Sample list: [1, 2, 3, 4, 5, 6]
+Expected Output: [2, 4, 6]
+
+6. Create a list of 100 integers whose value and index are the same, e.g., L[5]=5.
+
+7. Given a = [1,2,3] and b = [1,2,3] , what is the result of:
+(a) a == b
+(b) a is b
+
+8. Write a Python program to remove duplicates from a list.
+Sample list: [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6]
+Expected Output: [1, 2, 3, 4, 5, 6]
+
+9. Write a Python function that takes two lists and returns True if they have at least one common member.
+Sample list: [1, 2, 3, 4, 5, 6] and [10, 9, 8, 7, 6]
+Expected Output: True
+
+10. Write a Python program to get the difference between the two lists.
+Sample list: [1, 2, 3, 4, 5, 6] minus [10, 9, 8, 7, 6]
+Expected Output: [1, 2, 3, 4, 5]
+Sample list: [10, 9, 8, 7, 6] minus [1, 2, 3, 4, 5, 6]
+Expected Output: [10, 9, 8, 7]
+
+11. Write a Python program to convert a list of multiple integers into a single integer. 
+Sample list: [11, 33, 50]
+Expected Output: 113350
+
+
