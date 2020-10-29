@@ -1,0 +1,26 @@
+
+(a) This method will return a string in which the first letter is capitalized or if it is already capitalized it will return the origional string
+concord = Concord
+souix city = Souix city
+HONOLULU = HONOLULU
+
+(b) This method will swap the cases of all the characters in the string e.g. from upper to lower and from lower to upper
+concord = CONCORD
+souix city = SOUIX CITY
+HONOLULU = honolulu
+
+(c) This method will convert all lower case characters in a string to upper case ones
+concord = CONCORD
+souix city = SOUIX CITY
+HONOLULU = HONOLULU
+
+(d) The lower method will convert all upper case characters in a string to lower case ones
+concord = concord
+suix city = suix city
+HONOLULU = honolulu
+
+(e) This method will turn the first alphabetical character in every word in a string to an upper case one
+concord = Concord
+suix city = Suix City
+HONOLULU = HONOLULU
+

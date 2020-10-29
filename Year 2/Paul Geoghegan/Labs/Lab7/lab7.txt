@@ -1,0 +1,24 @@
+
+10.
+The count method will search through a string for a substring as per the example
+some_string = "Hello world!"
+some_string.count("o")
+It would return 2 as the substring o appears twice
+
+11.
+The strip method will remove specified characters from the left (leading) and right (trailing) of a string
+This would actually not change anything about the given example as the specified characters are the wrong way round
+
+12.
+(a)
+for i in range(0, 81):
+	str += "-"
+
+print(str)
+
+(b)
+print("-"*30)
+
+13.
+ab_string = 'abababababababab' 
+str = ab_string.replace("b", "")
