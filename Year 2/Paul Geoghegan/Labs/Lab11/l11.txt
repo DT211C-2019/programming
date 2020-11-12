@@ -1,0 +1,20 @@
+1
+(a)
+['bye', 'mother', 'dad', ['nanna', 'grandpa']]
+(b)
+['bye', 'mother', 'dad', ['nanna', 'grandpa']]
+(c)
+['hi', 'mom', 'father', ['nanna', 'grandpa']]
+
+2
+10
+
+3
+(a)
+[1,99] 
+(b)
+Use coppy() instead of equils:
+list3 = list2.copy()
+This will mean that when the elements of list1 or 2 are changed list 3 will not change
+
+4
