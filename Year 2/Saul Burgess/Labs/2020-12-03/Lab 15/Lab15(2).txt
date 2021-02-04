@@ -1,0 +1,4 @@
+(a): It will return 'even'
+(b): "even"
+(c): "negative"
+(d): "odd"

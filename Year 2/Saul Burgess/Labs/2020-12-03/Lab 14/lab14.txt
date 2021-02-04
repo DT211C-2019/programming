@@ -1,0 +1,8 @@
+1. Paramaters and arguments are mainly the same, they are both ways of passing data to a function. 
+2. 5,6,7
+3. 3,2 this is because the function definition overwrites the passed data
+4. add_one(3, X) or add_one(3,1)
+5. 
+    (a): a,b,c,d
+    (b): ['goodbye', 'mother', 'and', 'father']
+    (c): sister

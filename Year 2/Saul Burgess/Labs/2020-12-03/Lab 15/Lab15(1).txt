@@ -1,0 +1,4 @@
+(a): The list 1,2,3
+(b): The list 1,2,3,10,11,12
+(c): 39
+(d): The program would execute the function, but nothing would happen. As the functon would finish with nothing to pass the data back to

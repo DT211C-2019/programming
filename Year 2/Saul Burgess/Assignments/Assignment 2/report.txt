@@ -1,0 +1,135 @@
+Project Classes and Methods:
+
+This program is split into three classes and seven methods.
+- Classes:
+
+    * Shopping Cart: The shopping cart holds information on a users current shopping cart inventory, it also includes several
+    functions to manipulate this data. These include:
+
+        __init__: The initiliisation function, this sets the initial variables of the class from passed arguments.
+
+        __str__: The string function, when shopping cart is printed this function will trigger and display the internal 
+        dictionary in a formatted way.
+
+        initialise_cart: This is a reset function in case the cart needs to be zerod out, this is mainly intended as a 
+        debug function.
+
+        add_to_cart: This is an addition function, and has the capability of adding additional elements to the 
+        dictionary.
+
+        remove_item_from_cart: This does the inverse of the above, can removes elements from the cart. 
+
+    * Customer: This is the superclass for all child customers. The customer class holds information on the products 
+    availible to a customer. It also holds their funds, name and a shopping_cart object. It has several functions:
+
+        __init__: The initiliisation function, this sets the initial variables of the class from passed arguments.
+
+        __str__: Returns a formatted string containing a list of all the products that are availible to a customer. 
+
+        initialise_products: This sets the 'products' field in the class to a preformated setup, this is intended as 
+        a reset function. But is used in the program as an easy way to setup the class. 
+
+        add_funds: The add funds function will add a chosen amount of money to the customer object.
+
+        remove_funds: The inverse of add funds.
+
+        set_funds: Directly sets funds, primairly intended as a debug function.
+
+        make_shopping_cart: As customer contains the shopping cart object, this command initialises/resets the contents
+        of the shopping cart. Allowing for it's use later in the program.
+
+    *Bargain_Hunter: This is a child of customer, and does several things differently.
+
+        __init__: The initiliisation function, this sets the initial variables of the class from passed arguments. 
+
+        __str__: Returns a formatted string containing a list of all the products that are availible to a customer. This
+        string ovverides the Customer STR, as it also displays the users loyalty_points.
+
+        initialise_products: This overwites the Customer function as a diffrent set of products is availible to a
+        Bargain_Hunter
+
+        add_loyalty_points: This adds points to a users loyalty score.
+
+    *Loyal_Customer: This is a child of customer, and does several things differently.
+
+        __init__: The initiliisation function, this sets the initial variables of the class from passed arguments.
+
+        __str__: Returns a formatted string containing a list of all the products that are availible to a customer. This
+        string ovverides the Customer STR, as it displays when the user first started shopping in the store. 
+
+        initialise_products: This overwites the Customer function as a diffrent set of products is availible to a
+        Loyal_Customer
+
+        set_year_of_first_shop: This sets the year when they first shopped in the store.
+
+- Option Definitions:
+
+    *create_a_customer: This is the first of the options avaible in the CLI (command line interface), it asks the user
+    a series of questions to determine whether they are a 'Loyal Customer' or a 'Bargain_Hunter'. The key factor is how
+    long they have been shopping at the store. Loyal Customers are defined as any customer who shopped in the store
+    before 2015. This function also handles initialising both the shopping_cart and the customer objects. It stores
+    both of these in one object called 'person'.
+
+    *List_Products: This is a simple display function, when passed an object (Person) it will display the string that
+    was defined earlier in __str__. This function checks if the customer object has been created before it displays the
+    string, if it does not see the object. It will display an error. 
+
+    *add_remove_Cart: This function takes the person object and then accesses the stored shopping_cart object. It will
+    then as the user whether they want to add or remove an item to their cart. If the user selects add, it will then
+    prompt the user to enter an item. If this item is on the product listing then it will add the item to your cart, if
+    not it will display an error. The remove part works similarly, but instead of refrencing the product listing it
+    refrences the cart. It will then remove the chosen item from the cart. 
+
+    *list_cart: List cart works very similarly to List_Products, it just accesses the inner shopping_cart object.
+
+    *exit_program: or "checkout" totals up the cost of the goods in shopping_cart then checks your funds, if your funds
+    are too low. It will prompt you to add new funds. Once you have enough funds, it will complete the transaction and
+    end the program.
+
+-Utility Definitions:
+    *Menu_Header: A very simple method that displays a consistant header message on each 'page' of the cli. It also
+    wipes the terminal each time, to give a more menu like feel.
+
+    *test: A method that when called will all parts of the program along a pre-determined path. This is mainly intended
+    to quickily test the functions of the program while bypassing the CLI.
+
+
+User Manual:
+    This program is very easy to work through, here is a step-by-step guide on it's use. 
+    1. Select option one and create your account. You will be prompted for the year of the first time you shopped. You
+    have two choices here:
+        - Before 2015 = Loyal_Customer
+        - After 2015 = Bargain_Hunter
+    Once selected, you will be prompted for your details. 
+
+    2. When done with entering your details, you can display what products are availible to you by selecting option 2.
+
+    3. Once you have found some things you wish to buy, you can select option 4 and add an item to your cart. Repeat
+    as many times as you wish.
+
+    4. OPTIONAL: If you make a mistake, you can select option 3 again and select 'remove item'. This allows you to
+    remove any unwanted items from your cart.
+
+    5. You may view your cart at any time with option 4.
+
+    6. Once done, you can select option 5 to checkout. Your balance will then be calculated and paid. 
+
+    7. NOTE! If you do not have enough funds, you will be prompted to add aditional funds. You will not be allowed to
+    leave until your total is met!
+
+    8. The program will then end.
+
+
+Challanges:
+
+*Shopping Cart: A problem that took me time to solve was the cart. I initally had them as two seperate objects, which
+only ever interaccted in the later functions. But I ended up having many problems with passing the two objects between
+functions. I was eventually forced to make the cart globally scoped, but I researched other solutions to the problem. 
+I realised that I could hold classes /within/ other classes, this simplified the amount of passing I had to do
+dramatically, it also simplified the code a great deal. 
+
+*Exception handling: As an addition to the above issue, having objects inside objects made exception handling much more
+difficult. An issue that would crop up for me repeatedly was the 'decision-tree' of various flows that could happen
+throughout the program. Including error flows, I counted 15 different ways you could naviagte through the program. To 
+make this easier, I wrote down the fifteen paths and tested each indvidually. Several paths created unexpected exceptions
+I had not accounted for until then. 

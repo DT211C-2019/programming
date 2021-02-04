@@ -1,0 +1,9 @@
+Jbutton
+    a: java.desktopm, javax.swing
+    b: creates a button that can be pushed
+    c: 5
+
+ArrayList
+    a: java.base, java.util
+    b: 3
+    c: removeAll
