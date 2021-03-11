@@ -1,0 +1,14 @@
+public class Screen extends JFrame implements ActionListener {
+    public Window(){
+
+        Jbutton ok = new Jbutton("OK");
+        ok.addActionListener(this);
+        panel.add(ok);
+    }
+
+    public void actionPerformed (ActionEvent e)
+    {
+        System.exit(0);
+    }
+
+}
